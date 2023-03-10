@@ -1,0 +1,5 @@
+
+.new-object, .object-end, .new-array, .array-end {
+    color: #339930;
+    font-weight: bold;
+}

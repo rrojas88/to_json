@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link href="bootstrap5.3/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet" >
+
+    <script src="bootstrap5.3/bootstrap.bundle.min.js"></script>
+    <script src="js/vue.global.js"></script>
+</head>
+<body>
+<div id="app" class="container">
+    <h1>{{ message }}</h1>
+
+    <!--
+            ================================
+  
+        -->
+    <div class="row mb-3 ">
+        <h3>Payloa</h3>
+        <div class="col-12  mb-3 ">
+            JSON Indep: <br />
+            <textarea name="json_indep" 
+                id="json_indep" cols="60" 
+                rows="10"
+                v-model="json_indep_str" 
+                class="form-control"
+            ></textarea>
+            <button 
+                type="button"
+                class="btn btn-info"
+                @click="strToObject()"
+                >
+                Convertir
+            </button>
+            <br />
+        </div>
+
+        <div class="col-5">
+            <pre> {{ json_indep_base }} </pre>
+        </div>
+
+        <div class="col-7">
+            {
+            <div id="div-json-indep"  >
+                <!--
+                <div class="mb-1 row">
+                    <label for="Nombre" class="col-sm-6 col-form-label col-form-label-sm">
+                        Aaaa: 
+                    </label>
+                    <div class="col-sm-6">
+                        <input name="Nombre" type="text" class="form-control form-control-sm" />
+                    </div>
+                </div>
+                <div class="mb-1 row">
+                    <label for="Edad" class="col-sm-6 col-form-label col-form-label-sm">
+                        Edad: 
+                    </label>
+                    <div class="col-sm-6">
+                        <input name="Edad" type="text" class="form-control form-control-sm" />
+                    </div>
+                </div> -->
+            </div>
+            }
+        </div>
+
+        <div class="col-12 mb-3 mt-3 ">
+            <button 
+                type="button"
+                class="btn btn-secondary"
+                @click="getValuesForm()"
+                >
+                Consumir
+            </button>
+        </div>
+
+        <hr  class="mb-3 " />
+
+        <div class="col-5">
+            <pre> {{ json_indep }} </pre>
+        </div>
+
+    </div>
+    
+</div>
+
+<script src="js/controller.js"></script>
+</body>
+</html>
